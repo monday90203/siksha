@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>식샤 갠홈 – 영화</title>
+
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/movie.css" />
+</head>
+<script src="js/mouseSparkle.js"></script>
+<body>
+
+<header class="gnb">
+   <h1 class="logo">SIKSHA</h1>
+  <nav class="nav">
+    <a href="index.html">메인</a>
+    <a href="fair.html">페어</a>
+    <a href="commission.html">커미션</a>
+    <a href="movie.html" class="active">영화</a>
+    <a href="talk.html">사담</a>
+  </nav>
+</header>
+
+<main class="movie-wrapper">
+
+  <header class="page-head">
+    <h2>영화</h2>
+    <p class="page-desc">본 영화 기록</p>
+  </header>
+
+  <section class="movie-grid">
+    <!-- 영화 카드 -->
+    <article class="movie-card"
+      data-title="영화 제목"
+      data-poster="assets/images/movie1.jpg"
+      data-rating="★★★★☆ 4.0"
+      data-review="여기에 영화 소감을 씁니다. 블라블라블라">
+      <div class="poster-thumb"></div>
+      <p class="movie-title">영화 제목</p>
+    </article>
+
+    <!-- 카드 복붙해서 추가 -->
+  </section>
+
+</main>
+
+<!-- =====================
+     오버레이
+===================== -->
+<div id="movieOverlay" class="overlay hidden">
+  <div class="overlay-content movie-overlay">
+    <button id="closeMovieOverlay">닫기</button>
+
+    <h3 id="overlayTitle"></h3>
+    <img id="overlayPoster" src="" alt="">
+    <p id="overlayRating"></p>
+    <p id="overlayReview"></p>
+  </div>
+</div>
+
+<script src="js/movie.js"></script>
+</body>
+</html>

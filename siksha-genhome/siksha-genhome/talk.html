@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>식샤 갠홈 – 사담</title>
+
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/talk.css" />
+</head>
+<script src="js/mouseSparkle.js"></script>
+<body>
+
+  <header class="gnb">
+    <h1 class="logo">SIKSHA</h1>
+    <nav class="nav">
+      <a href="index.html">메인</a>
+      <a href="fair.html">페어</a>
+      <a href="commission.html">커미션</a>
+      <a href="movie.html">영화</a>
+      <a href="talk.html" class="active">사담</a>
+    </nav>
+  </header>
+
+  <main class="talk-wrapper">
+    <header class="page-head">
+      <h2>사담</h2>
+      <p class="page-desc"> 방명록</p>
+    </header>
+
+    <section class="talk-content">
+      <textarea id="postTitle" placeholder="제목을 입력하세요" rows="1"></textarea>
+      <textarea id="postContent" placeholder="여기에 글을 쓰세요..." rows="10"></textarea>
+      <button id="savePost" class="save-btn">글 저장</button>
+    </section>
+
+    <section class="saved-posts">
+      <h3>저장된 글</h3>
+      <ul id="postList">
+        <!-- 저장된 글 목록 -->
+      </ul>
+
+      <div class="pagination">
+        <button id="prevPage" class="page-btn">이전</button>
+        <button id="nextPage" class="page-btn">다음</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 식샤 갠홈</p>
+  </footer>
+
+  <script src="js/talk.js"></script>
+</body>
+</html>

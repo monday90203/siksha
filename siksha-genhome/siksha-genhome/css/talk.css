@@ -1,0 +1,175 @@
+/* =======================
+   기본 레이아웃
+======================== */
+.talk-wrapper {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 24px;
+}
+
+/* =======================
+   페이지 헤더
+======================== */
+.page-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.page-head h2 {
+  font-size: 18px;
+}
+
+.page-desc {
+  font-size: 12px;
+  color: #555;
+}
+
+/* =======================
+   텍스트 입력 영역
+======================== */
+/* =======================
+   텍스트 입력 영역 크기 조정
+======================== */
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px; /* 텍스트 크기 감소 */
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  resize: none;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 12px;
+}
+
+textarea:focus {
+  border-color: #005BFF;
+  box-shadow: 0 0 8px rgba(0, 91, 255, 0.4);
+  outline: none;
+}
+
+textarea::placeholder {
+  font-size: 14px;
+  color: #aaa;
+  opacity: 1;
+}
+
+/* =======================
+   글 저장 버튼 크기 조정
+======================== */
+#savePost {
+  padding: 8px 18px;
+  background-color: #005BFF;
+  color: white;
+  font-size: 14px; /* 글씨 크기 감소 */
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 12px;
+}
+
+#savePost:hover {
+  background-color: #004BB5;
+}
+
+/* =======================
+   저장된 글 목록
+======================== */
+.saved-posts {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.saved-posts h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.saved-posts ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.saved-posts li {
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.saved-posts li .post-title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.saved-posts li .post-time {
+  font-size: 12px;
+  color: #555;
+}
+
+.saved-posts li .post-content {
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.saved-posts li .action-buttons {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.saved-posts li button {
+  padding: 3px 6px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.saved-posts li .edit-btn {
+  background-color: #005BFF;
+  color: white;
+  border: none;
+}
+
+.saved-posts li .delete-btn {
+  background-color: #FF6B6B;
+  color: white;
+  border: none;
+}
+
+.saved-posts li button:hover {
+  opacity: 0.8;
+}
+
+/* =======================
+   Pagination
+======================== */
+.pagination {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-btn {
+  background-color: #005BFF;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.page-btn:hover {
+  background-color: #004BB5;
+}
