@@ -1,0 +1,155 @@
+/* =====================
+   Layout
+===================== */
+.movie-wrapper {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 24px;
+}
+
+.page-desc {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+/* =====================
+   Grid
+===================== */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+/* =====================
+   Movie Card
+===================== */
+.movie-card {
+  border: 1px solid #222;
+  background: #fff;
+  cursor: pointer;
+  padding-bottom: 8px;
+}
+
+.poster-thumb {
+  aspect-ratio: 2 / 3;
+  background: #eaeaea;
+  border-bottom: 1px solid #222;
+}
+
+.movie-title {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 8px;
+}
+
+/* =====================
+   Overlay
+===================== */
+.movie-overlay {
+  max-width: 600px;
+}
+
+.movie-overlay h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.movie-overlay img {
+  width: 100%;
+  max-height: 60vh;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+#overlayRating {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+#overlayReview {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =====================
+   Overlay (필수)
+===================== */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* 살짝 연하게 */
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* ✅ 아래에 붙이기 */
+
+  z-index: 9999;
+}
+
+
+.overlay.hidden {
+  display: none;
+}
+
+#closeMovieOverlay {
+  align-self: flex-end;
+  margin-bottom: 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* =====================
+   Movie Overlay Sheet
+===================== */
+.movie-overlay {
+  width: 100%;
+  max-width: 720px;
+
+  background: #fff;
+  border-radius: 12px 12px 0 0; /* ✅ 위만 둥글게 */
+  padding: 20px;
+
+  max-height: 80vh;           /* ✅ 노션 느낌 */
+  overflow-y: auto;
+
+  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.movie-overlay h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.movie-overlay img {
+  width: 100%;
+  max-height: 50vh;
+  object-fit: contain;
+  margin-bottom: 12px;
+  background: #f3f3f3; /* 포스터 없을 때도 안정 */
+}
+
+#overlayRating {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+#overlayReview {
+  font-size: 13px;
+  line-height: 1.7;
+
+  
+  color: #333;
+}
+
+
+#closeMovieOverlay {
+  align-self: flex-start;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  padding: 2px 6px;
+  background: #fff;
+  cursor: pointer;
+  margin-bottom: 8px;
+}

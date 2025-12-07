@@ -1,0 +1,229 @@
+/* =========================
+   GRID (그리드 레이아웃)
+========================= */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1.5fr 1fr;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 24px;
+}
+
+/* =========================
+   PANEL (종이 박스) 스타일
+========================= */
+.panel {
+  padding: 16px;
+  background: #fff;
+  border: none;  /* 테두리 제거 */
+}
+
+.panel-title {
+  font-size: 14px;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+/* =========================
+   각 패널 구분선 (수평선) 추가
+========================= */
+.main-grid .panel {
+  border-bottom: 1px solid #ccc;  /* 각 패널 사이에 구분선 추가 */
+}
+
+.panel:last-child {
+  border-bottom: none;  /* 마지막 패널에선 구분선 없애기 */
+}
+
+/* =========================
+   INTRO (소개)
+========================= */
+.intro-content .name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.intro-content .meta {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.intro-content .tags {
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.profile-banner img {
+  width: 100%;
+  border: 1px solid #222;
+}
+
+/* =========================
+   DETAIL (아코디언)
+========================= */
+details {
+  overflow: hidden;
+  max-height: 500px; /* 기본적으로 열려 있는 상태로 설정 */
+  transition: max-height 0.5s ease-out, padding 0.3s ease; /* 부드러운 열기/닫기 애니메이션 */
+  padding: 0;
+}
+
+details[open] {
+  max-height: 500px; /* 열려 있는 상태 */
+}
+
+summary {
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+details p {
+  font-size: 12px;
+  margin-top: 6px;
+  line-height: 1.5;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* 텍스트도 부드럽게 나타나도록 */
+}
+
+details[open] p {
+  opacity: 1; /* 열릴 때 텍스트가 부드럽게 보이도록 */
+}
+
+details[open] summary {
+  font-weight: 700;
+  color: #005BFF;
+}
+
+
+
+
+/* =========================
+   BANNER LIST (배너 리스트)
+========================= */
+.banner-list {
+  list-style: none;
+}
+
+.banner-list li {
+  border: 1px solid #222;
+  margin-bottom: 8px;
+}
+
+.banner-list img {
+  width: 100%;
+  display: block;
+}
+
+.notice-box {
+  border: 1px solid #005BFF;
+  padding: 10px;
+  margin: 10px 0;
+  background: #f5f7ff;
+  font-size: 12px;
+}
+
+.notice-title {
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #005BFF;
+}
+
+.section-title {
+  margin-top: 12px;
+  font-size: 13px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 2px;
+}
+
+.text-list {
+  font-size: 12px;
+  margin: 6px 0 0 14px;
+}
+
+.text-list li {
+  margin-bottom: 4px;
+}
+
+.text-list.emphasis li {
+  font-weight: 600;
+}
+
+/* TRPG를 기본 성향과 동일한 문서 톤으로 */
+.info-box {
+  margin-top: 6px;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+/* 제목은 section-title 톤으로 흡수 */
+.info-title {
+  margin-top: 12px;
+  margin-bottom: 4px;
+  font-size: 13px;
+  font-weight: normal;
+  color: #000;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 2px;
+}
+
+/* 리스트는 text-list와 동일 */
+.info-list {
+  font-size: 12px;
+  margin: 6px 0 0 18px;
+  line-height: 1.6;
+}
+
+/* =========================
+   FAQ STYLE ACCORDION (FAQ 아코디언)
+========================= */
+
+/* 각 항목을 FAQ 한 줄처럼 */
+.detail-panel details {
+  border-top: 1px solid #ddd;
+  padding: 14px 0;
+}
+
+/* 제목 줄 */
+.detail-panel summary {
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  list-style: none; /* 기본 ▶ 제거 */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 커스텀 + 아이콘 */
+.detail-panel summary::after {
+  content: "+";
+  font-size: 16px;
+  line-height: 1;
+  color: #005BFF;
+}
+
+/* 열렸을 때 */
+.detail-panel details[open] summary::after {
+  content: "–";
+}
+
+/* 열렸을 때 내용 */
+.detail-panel details > *:not(summary) {
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* 마지막 항목 아래 선 정리 */
+.detail-panel details:last-of-type {
+  border-bottom: 1px solid #ddd;
+}

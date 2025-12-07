@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>식샤 갠홈 – 커미션 기록</title>
+
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/commission.css" />
+</head>
+<body>
+
+<header class="gnb">
+  <h1 class="logo">식샤 갠홈</h1>
+  <nav class="nav">
+    <a href="index.html">메인</a>
+    <a href="fair.html">페어</a>
+    <a href="commission.html" class="active">커미션</a>
+    <a href="movie.html">영화</a>
+    <a href="talk.html">사담</a>
+  </nav>
+</header>
+
+<main class="commission-wrapper">
+
+  <div class="page-head">
+    <h2>커미션 기록</h2>
+    <button id="addImageBtn">+ 이미지 추가</button>
+  </div>
+
+  <section id="commissionGrid" class="commission-grid">
+    <!-- 카드들이 들어올 자리 -->
+  </section>
+
+</main>
+
+<!-- ========== 오버레이 ========== -->
+<div id="overlay" class="overlay hidden">
+  <div class="overlay-content">
+    <img id="overlayImg" src="" alt="">
+    <p id="overlaySource"></p>
+
+    <div class="overlay-actions">
+      <button id="deleteOverlay">이미지 삭제</button>
+      <button id="closeOverlay">닫기</button>
+    </div>
+  </div>
+</div>
+
+<input type="file" id="imageInput" accept="image/*" hidden>
+
+<script src="js/commission.js"></script>
+</body>
+</html>
